@@ -1,5 +1,5 @@
 # DS-LAB
-All practice problems and mandatory questions prescribed for S3 B.tech students in CSL 201  for B.tech(2019 Scheme).
+All practice problems and mandatory questions prescribed for S3 B.tech students in CSL 201 for B.tech(2019 Scheme).
 
 
 
@@ -24,6 +24,7 @@ sum in tuple form.
           4.1.Insert an element to the queue.       
           4.2.Delete an elements from the queue.
           4.3.Display the contents of the queue after each operation.
+           [-----> circularqueue.c <-----]
 
 5. Implement a Queue using arrays with the operations:   
   
@@ -46,6 +47,7 @@ sum in tuple form.
         7.1.Insert elements to the Priority Queue.
         7.2.Delete elements from the Priority Queue.
         7.3.Display the contents of the Priority Queue after each operation.
+         [-----> priorityqueue.c <-----]
 
 8. Implement a Double-Ended Queue (DEQUEUE) with the operations:
 
@@ -54,9 +56,11 @@ sum in tuple form.
         8.3.Delete elements from the Front of the queue.
         8.4.Delete elements from the Rear of the queue.
         8.5.Display the queue after each operation.
+         [-----> doubleendedqueue.c <-----]
 
 9. Using stack convert an infix expression to a postfix expression and evaluate the postfix
 expression.
+ [-----> infixtopostfix.c <-----]
 
 10. Write a program to convert an infix expression to a prefix expression using stacks.
 
@@ -71,24 +75,28 @@ expression.
         12.5.Delete from Beginning
         12.6.Delete from End
         12.7.Delete from a specified Position
+         [-----> linkedlistop.c <-----]
 
 13. Implement a stack using linked list with the operations:
 
         13.1.Push elements to the queue.
         13.2.Pop elements from the queue.
         13.3.Display the queue after each operation.
+         [-----> stack_linkedlist.c <-----]
 
 14. Implement a Queue using linked list with the operations:
 
         14.1.Insert an elements to the queue.
         14.2.Delete an elements from the queue.
         14.3.Display the queue after each operation.
+         [-----> queue_linkedlist.c <-----]
 
 15. Write a program to reverse the content of queue using stack
 
 16. Write a program to read two polynomials and store them using linked list. Calculate the sum
 of the two polynomials and display the first polynomial, second polynomial and the resultant
 polynomial.
+ [-----> polynomial_linkedlist.c <-----]
 
 17. Write a program to read two polynomials and store them using linked list. Find the product
 of two polynomials and store the result using linked list. Display the resultant polynomial.
