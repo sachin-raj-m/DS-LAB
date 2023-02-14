@@ -102,7 +102,7 @@ polynomial.
 17. Write a program to read two polynomials and store them using linked list. Find the product
 of two polynomials and store the result using linked list. Display the resultant polynomial.
 
-18. Write a program for addition of polynomials containing two variables using linked list.
+18. Write a program for addition of polynomials containing two variables using linked list. (Implemented in 16th Question).
 
 19. The details of students(number, name, total-mark) are to be stored in a linked list. Write
 functions for the following operations:
