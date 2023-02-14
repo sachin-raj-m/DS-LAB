@@ -18,7 +18,7 @@ sum in tuple form.
 3. Write a program to enter two matrices in normal form . Write a function to convert two
 matrices to tuple form and display it. Also find the transpose of the two matrices represented
 in tuple form and display it. Find the sum of the two matrices in tuple form and display the
-sum in tuple form.
+sum in tuple form. (Copy of 2nd One).
 
 4. Implement a circular queue using arrays with the operations:
 
