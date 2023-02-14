@@ -13,6 +13,7 @@ polynomial.
 matrices to tuple form and display it. Also find the transpose of the two matrices represented
 in tuple form and display it. Find the sum of the two matrices in tuple form and display the
 sum in tuple form.
+                   ```  [-----> sparsematrix.c <-----]```
 
 3. Write a program to enter two matrices in normal form . Write a function to convert two
 matrices to tuple form and display it. Also find the transpose of the two matrices represented
@@ -60,7 +61,7 @@ sum in tuple form.
 
 9. Using stack convert an infix expression to a postfix expression and evaluate the postfix
 expression.
- [-----> infixtopostfix.c <-----]
+          ``` [-----> infixtopostfix.c <-----]```
 
 10. Write a program to convert an infix expression to a prefix expression using stacks.
 
@@ -96,7 +97,7 @@ expression.
 16. Write a program to read two polynomials and store them using linked list. Calculate the sum
 of the two polynomials and display the first polynomial, second polynomial and the resultant
 polynomial.
- [-----> polynomial_linkedlist.c <-----]
+                    ``` [-----> polynomial_linkedlist.c <-----]```
 
 17. Write a program to read two polynomials and store them using linked list. Find the product
 of two polynomials and store the result using linked list. Display the resultant polynomial.
