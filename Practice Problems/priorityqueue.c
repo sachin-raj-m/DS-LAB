@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define max 5
-int size;
+#define size 5
+int priority;
 
-void insert(int pq[size][max],int front[size],int rear[size])
+void insert(int pq[priority][size],int front[priority],int rear[priority])
 {
     printf("Enter the element to insert:\n");
     int item;
@@ -11,7 +11,7 @@ void insert(int pq[size][max],int front[size],int rear[size])
     printf("Enter the Priority:\n");
     int p;
     scanf("%d", &p);
-    if (rear[p] == size+1)
+    if (rear[p] == priority+1)
     {
         printf("Overflow!\n");
     }
@@ -30,7 +30,7 @@ void insert(int pq[size][max],int front[size],int rear[size])
     }
 }
 
-void delete (int pq[size][max],int front[size],int rear[size])
+void delete (int pq[priority][size],int front[priority],int rear[priority])
 {
     for (int i = 0; i < size; i++)
     {
@@ -47,12 +47,12 @@ void delete (int pq[size][max],int front[size],int rear[size])
     printf("No item to be deleted!\n");
 }
 
-void print(int pq[size][max],int front[size],int rear[size])
+void print(int pq[priority][size],int front[priority],int rear[priority])
 {
     printf("Displaying Queue:\n");
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < priority; i++)
     {
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < size; j++)
         {
             if (pq[i][j] == 'a')
                 printf("_ ");
@@ -67,12 +67,12 @@ void print(int pq[size][max],int front[size],int rear[size])
 int main()
 {
     printf("Enter Size of Priority:\n");
-    scanf("%d",&size);
+    scanf("%d",&priority);
     printf("Priority is considered from top to bottom i.e, if the entered priority is 3(0 have the highest priority, then 1 and then the lowest priority for 2.)\n\n");
-    int pq[size][max];
-    int front[size];
-    int rear[size];
-    for(int i=0; i<size; i++)
+    int pq[priority][size];
+    int front[priority];
+    int rear[priority];
+    for(int i=0; i<priority; i++)
     {
         front[i]=-1;
         rear[i]=-1;
