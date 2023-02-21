@@ -262,7 +262,7 @@ void insert_pos()
 void delete_begin()
 {
         struct node *ptr;
-        if(ptr==NULL)
+        if(HEAD==NULL)
         {
                 printf("List is Empty:n");
                 return;
