@@ -335,7 +335,7 @@ void delete_pos()
                                 return;
                             }
                         }
-                        temp->next = ptr->link ;
+                        temp->link = ptr->link ;
                         printf("The deleted element is:%d .",ptr->data );
                         free(ptr);
                 }
