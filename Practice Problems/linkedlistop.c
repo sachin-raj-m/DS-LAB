@@ -24,7 +24,7 @@ void delete_pos();
 struct node
 {
         int data;
-        struct node *next;
+        struct node *link;
 };
 struct node *HEAD=NULL;
 int main()
@@ -132,28 +132,28 @@ void deletion()
 
 void create()
 {
-        struct node *temp,*ptr;
+        struct node *new,*ptr;
         temp=(struct node *)malloc(sizeof(struct node));
-        if(temp==NULL)
+        if(new==NULL)
         {
                 printf("Out of Memory Space.\n");
                 exit(0);
         }
         printf("Enter the data value for the node:");
-        scanf("%d",&temp->data);
-        temp->next=NULL;
+        scanf("%d",&new->data);
+        new->link=NULL;
         if(HEAD==NULL)
         {
-                HEAD=temp;
+                HEAD=new;
         }
         else
         {
                 ptr=HEAD;
-                while(ptr->next!=NULL)
+                while(ptr->link!=NULL)
                 {
-                        ptr=ptr->next;
+                        ptr=ptr->link;
                 }
-                ptr->next=temp;
+                ptr->link=new;
         }
 }
 void display()
@@ -171,63 +171,63 @@ void display()
                 while(ptr!=NULL)
                 {
                         printf("%d\t",ptr->data );
-                        ptr=ptr->next ;
+                        ptr=ptr->link ;
                 }
         }
 }
 void insert_begin()
 {
-        struct node *temp;
-        temp=(struct node *)malloc(sizeof(struct node));
+        struct node *new;
+        new=(struct node *)malloc(sizeof(struct node));
         if(temp==NULL)
         {
                 printf("Out of Memory Space\n");
                 return;
         }
         printf("Enter the data value for the node:" );
-        scanf("%d",&temp->data);
-        temp->next =NULL;
+        scanf("%d",&new->data);
+        new->link =NULL;
         if(HEAD==NULL)
         {
-                HEAD=temp;
+                HEAD=new;
         }
         else
         {
-                temp->next=HEAD;
-                HEAD=temp;
+                new->link=HEAD;
+                HEAD=new;
         }
 }
 void insert_end()
 {
-        struct node *temp,*ptr;
-        temp=(struct node *)malloc(sizeof(struct node));
+        struct node *new,*ptr;
+        new=(struct node *)malloc(sizeof(struct node));
         if(temp==NULL)
         {
                 printf("Out of Memory Space:");
                 return;
         }
         printf("Enter the data value for the node:" );
-        scanf("%d",&temp->data );
-        temp->next =NULL;
+        scanf("%d",&new->data );
+        new->link =NULL;
         if(HEAD==NULL)
         {
-                HEAD=temp;
+                HEAD=new;
         }
         else
         {
                 ptr=HEAD;
-                while(ptr->next !=NULL)
+                while(ptr->link !=NULL)
                 {
-                        ptr=ptr->next ;
+                        ptr=ptr->link ;
                 }
-                ptr->next =temp;
+                ptr->link =new;
         }
 }
 void insert_pos()
 {
-        struct node *ptr,*temp;
+        struct node *ptr,*new;
         int i,pos;
-        temp=(struct node *)malloc(sizeof(struct node));
+        new=(struct node *)malloc(sizeof(struct node));
         if(temp==NULL)
         {
                 printf("Out of Memory Space:");
@@ -236,27 +236,27 @@ void insert_pos()
         printf("Enter the position for the new node to be inserted:");
         scanf("%d",&pos);
         printf("nEnter the data value of the node.");
-        scanf("%d",&temp->data) ;
+        scanf("%d",&new->data) ;
 
-        temp->next=NULL;
+        new->link=NULL;
         if(pos==0)
         {
-                temp->next=HEAD;
-                HEAD=temp;
+                new->link=HEAD;
+                HEAD=new;
         }
         else
         {
                 for(i=0,ptr=HEAD;i<pos-1;i++)
                 {
-                    ptr=ptr->next;
+                    ptr=ptr->link;
                     if(ptr==NULL)
                     {
                         printf("Position not found:[Handle with care]\n");
                         return;
                     }
                 }
-                temp->next =ptr->next ;
-                ptr->next=temp;
+                new->link =ptr->link ;
+                ptr->link=new;
         }
 }
 void delete_begin()
@@ -270,20 +270,20 @@ void delete_begin()
         else
         {
                 ptr=HEAD;
-                HEAD=HEAD->next ;
+                HEAD=HEAD->link;
                 printf("The deleted element is :%d",ptr->data);
                 free(ptr);
         }
 }
 void delete_end()
 {
-        struct node *temp,*ptr;
+        struct node *new,*ptr;
         if(HEAD==NULL)
         {
                 printf("nList is Empty:");
                 exit(0);
         }
-        else if(HEAD->next == NULL)
+        else if(HEAD->link == NULL)
         {
                 ptr=HEAD;
                 HEAD=NULL;
@@ -293,12 +293,12 @@ void delete_end()
         else
         {
                 ptr=HEAD;
-                while(ptr->next!=NULL)
+                while(ptr->link!=NULL)
                 {
-                        temp=ptr;
-                        ptr=ptr->next;
+                        new=ptr;
+                        ptr=ptr->link;
                 }
-                temp->next=NULL;
+                temp->link=NULL;
                 printf("The deleted element is:%d",ptr->data);
                 free(ptr);
         }
@@ -306,7 +306,7 @@ void delete_end()
 void delete_pos()
 {
         int i,pos;
-        struct node *temp,*ptr;
+        struct node *new,*ptr;
         if(HEAD==NULL)
         {
                 printf("The List is Empty.");
@@ -319,7 +319,7 @@ void delete_pos()
                 if(pos==0)
                 {
                         ptr=HEAD;
-                        HEAD=HEAD->next ;
+                        HEAD=HEAD->link;
                         printf("The deleted element is:%d",ptr->data  );
                         free(ptr);
                 }
@@ -327,15 +327,15 @@ void delete_pos()
                 {
                         ptr=HEAD;
                         for(i=0;i<pos;i++) {
-                            temp=ptr;
-                            ptr=ptr->next ;
+                            new=ptr;
+                            ptr=ptr->link ;
                             if(ptr==NULL)
                             {
                                 printf("Position not Found.");
                                 return;
                             }
                         }
-                        temp->next = ptr->next ;
+                        temp->next = ptr->link ;
                         printf("The deleted element is:%d .",ptr->data );
                         free(ptr);
                 }
