@@ -179,7 +179,7 @@ void insert_begin()
 {
         struct node *new;
         new=(struct node *)malloc(sizeof(struct node));
-        if(temp==NULL)
+        if(new==NULL)
         {
                 printf("Out of Memory Space\n");
                 return;
@@ -201,7 +201,7 @@ void insert_end()
 {
         struct node *new,*ptr;
         new=(struct node *)malloc(sizeof(struct node));
-        if(temp==NULL)
+        if(new==NULL)
         {
                 printf("Out of Memory Space:");
                 return;
@@ -228,7 +228,7 @@ void insert_pos()
         struct node *ptr,*new;
         int i,pos;
         new=(struct node *)malloc(sizeof(struct node));
-        if(temp==NULL)
+        if(new==NULL)
         {
                 printf("Out of Memory Space:");
                 return;
