@@ -155,3 +155,6 @@ the sorted set using Binary Search.
 index varies from 0 to 9.
 
 29. Implement a Hash table that uses Linear Probing for collision resolution
+
+
+<img src="https://mulearn.org/embed/rank/sachinrajm@mulearn" width="100px" height="100px"></img>
